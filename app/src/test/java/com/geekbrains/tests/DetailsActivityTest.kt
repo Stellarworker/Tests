@@ -31,6 +31,11 @@ class DetailsActivityTest {
         context = ApplicationProvider.getApplicationContext()
     }
 
+    @After
+    fun close() {
+        scenario.close()
+    }
+
     @Test
     fun activity_AssertNotNull() {
         scenario.onActivity {
@@ -121,8 +126,5 @@ class DetailsActivityTest {
         assertEquals(count, bundle?.getInt(DetailsActivity.TOTAL_COUNT_EXTRA, 0))
     }
 
-    @After
-    fun close() {
-        scenario.close()
-    }
+
 }
