@@ -1,3 +1,3 @@
 package com.geekbrains.tests.presenter
 
-internal interface PresenterContract {}
+interface PresenterContract {}
